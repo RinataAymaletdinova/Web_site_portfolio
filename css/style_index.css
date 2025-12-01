@@ -1,0 +1,389 @@
+
+
+@font-face {
+    font-family: "ProstoOne";
+    src:url(../fonts/Prosto_One/ProstoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:url(../fonts/Montserrat/Montserrat-Regular.ttf)
+}
+
+@font-face{
+    font-family: "Montserrat-medium";
+    src:url(../fonts/Montserrat/Montserrat-Medium.ttf)
+}
+
+
+:root{
+    --accent-color: #51E2E7;
+    --accentHover-color: #5179E7;
+    --white: #FFFFFF;
+    --footer: #444444;
+    --dark-color: #2A2A2A;
+}
+.container{
+    max-width: 1360px;
+    padding: 0 70px;
+    margin: 0 auto;
+}
+.container_content{
+    max-width: 1360px;
+    padding: 250px 70px;
+    margin: 0 auto;
+}
+
+.text-p{
+    font-family: "Montserrat";
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.text-h1{
+    font-family: "Montserrat";
+    font-size: 64px;
+    padding-bottom: 50px;
+}
+a {
+    color: var(--white); 
+    text-decoration: none;
+}
+a:hover{
+    color: var(--accent-color);
+}
+a:active{
+    color: var(--accentHover-color);
+}
+/*_______________________________________Шапка__________________________________________________________*/
+.background_image{
+    background-attachment: fixed;
+    height: 945px; 
+    width: 100%;
+    background-image: url('../images/background/24 Dragon Age dark.png');
+    background-size: cover; 
+    background-position: top;
+    background-repeat: no-repeat; 
+}
+header{
+    margin-bottom: 210px;
+}
+/*_____________________Навигация_____________________*/
+
+.nav{
+    
+    font-family: "Montserrat-Medium";
+    font-size: 24px;
+    margin-top: 44px;
+    color: var(--white);
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+.nav_list{
+    margin-bottom: 3px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    column-gap: 48px;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid var(--white);
+    margin: 0 auto;
+}
+
+/*___________________________Навигация Конец___________________________*/
+.shapka{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.glav_zag{
+    margin: 0 auto;
+    font-family: "ProstoOne";
+    font-size: calc(65px + (300 - 65) * ((100vw - 300px) / (1920 - 300)));
+    max-width: 1360px;
+    color: #FFFFFF;
+    margin-top: 220px;
+}
+
+
+.podzag{
+    margin: 0 auto;
+    font-family: "Montserrat-Medium";
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+
+/*_______________________________________Шапка Конец__________________________________________________________*/
+
+
+/*_______________________________________Раздел о себе__________________________________________________________*/
+
+.about_me{
+    background-color: white;
+}
+
+.text_me{
+    opacity: 0;
+    transform: translateY(100px);
+
+    width: 440px;
+    min-width: 320px;
+}
+
+.text_me.element-show{
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+.image_pieces.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+.image_pieces{
+    opacity: 0;
+    transform: translateX(250px);
+
+    max-width: 100%;
+
+}
+
+.content_about_me{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    justify-content: space-between;
+    column-gap: 100px;
+    align-items: flex-end;
+
+}
+
+
+
+
+/*_______________________________________Раздел о себе КОНЕЦ__________________________________________________________*/
+
+
+/*_______________________________________Навыки__________________________________________________________*/
+.skills{
+    background-color: var(--dark-color);
+}
+
+.content_skills{
+    padding-top: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 100px;
+}
+
+.skills_text{
+    color: white;
+    min-width: 325px;
+    max-width: 325px;
+    
+
+}
+
+.skills_numbers{
+
+    opacity: 0;
+    transform: translateY(100px);
+    
+    width: 904px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 110px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.skills_numbers.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+  }
+/*_______________________________________Навыки КОНЕЦ__________________________________________________________*/
+
+/*_______________________________________Галерея НАЧАЛО__________________________________________________________*/
+
+
+.slider-content{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    align-items: top;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 500px;
+    height: 670px;
+    margin-bottom: 25px;
+    padding-bottom: 100px;
+}
+
+.slider-container {
+    position: relative;
+    width: 500px;
+    height: 670px;
+    overflow: hidden;
+}
+
+
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 500px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Стрелки за пределами слайдера */
+.slider-arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 340px;
+    left: -70px;
+    right: -70px;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+.arrow {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(128, 128, 128, 0.9);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.arrow:hover {
+    background-color: darkgray;
+    transform: scale(1.1);
+}
+
+.arrow-left {
+    transform: rotate(180deg);
+}
+
+.arrow-left:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+
+/* Точки под слайдером */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 80px;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    background-color: grey;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: darkgray;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px darkgray;
+}
+
+.textblock{
+display: flex;
+flex-direction: column;
+margin-top: 220px;
+}
+
+/*_______________________________________Галерея КОнец__________________________________________________________*/
+
+
+/*_______________________________________Футер__________________________________________________________*/
+
+.footer{
+    background-color: var(--footer);
+    height: 320px;
+}
+
+.content_footer{
+    font-family: "Montserrat";
+    padding-top: 85px;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.f_left{
+    display: inline-flex;
+    justify-content:space-between;
+    column-gap: 20px;
+    align-items:center;
+}
+
+
+.f_bottom_nav{
+    font-family: "Montserrat-medium";
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    column-gap: 45px;
+    padding-top: 45px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+}
+/*_______________________________________Футер КОНЕЦ__________________________________________________________*/
+
